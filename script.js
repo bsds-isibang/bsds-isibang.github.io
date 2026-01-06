@@ -211,9 +211,138 @@ const createCursorGlow = () => {
     });
 };
 
-// Only add cursor glow on desktop
+// ===== Math Cursor Trail Effect =====
+const createMathCursorTrail = () => {
+    // Mathematical symbols for the trail
+    const mathSymbols = [
+        '∑', '∫', '∂', '∞', 'π', '√', 'Δ', '∇', 'θ', 'λ', 
+        'μ', 'σ', 'φ', 'ψ', 'ω', 'α', 'β', 'γ', 'ε', 'ζ',
+        '∈', '∉', '⊂', '⊃', '∪', '∩', '∀', '∃', '≈', '≠',
+        '≤', '≥', '±', '÷', '×', '∝', '∴', '∵', 'ℝ', 'ℂ',
+        'ℕ', 'ℤ', 'ℚ', '⊕', '⊗', '∧', '∨', '¬', '⇒', '⇔',
+        'lim', 'sup', 'inf', 'det', 'dim', 'ker', 'log', 'ln',
+        'sin', 'cos', 'tan', 'exp', 'E[X]', 'P(A)', 'f(x)', 'dy/dx',
+        '∮', '∬', '∭', 'ℓ', 'ℏ', '∅', '⊥', '∥'
+    ];
+    
+    // Colors for the symbols (matching the theme)
+    const colors = [
+        'rgba(99, 102, 241, 0.8)',   // Primary accent
+        'rgba(129, 140, 248, 0.8)',  // Secondary accent
+        'rgba(167, 139, 250, 0.7)',  // Purple
+        'rgba(139, 92, 246, 0.7)',   // Violet
+        'rgba(192, 132, 252, 0.6)',  // Light purple
+    ];
+    
+    let lastX = 0;
+    let lastY = 0;
+    let throttle = false;
+    
+    // Create a container for math particles
+    const particleContainer = document.createElement('div');
+    particleContainer.id = 'math-particles';
+    particleContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        overflow: hidden;
+    `;
+    document.body.appendChild(particleContainer);
+    
+    // Create a single math particle
+    const createParticle = (x, y) => {
+        const particle = document.createElement('span');
+        const symbol = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const size = 12 + Math.random() * 14;
+        const duration = 1500 + Math.random() * 1000;
+        
+        // Random offset from cursor
+        const offsetX = (Math.random() - 0.5) * 30;
+        const offsetY = (Math.random() - 0.5) * 30;
+        
+        // Random movement direction
+        const moveX = (Math.random() - 0.5) * 100;
+        const moveY = -30 - Math.random() * 70; // Float upward
+        const rotation = (Math.random() - 0.5) * 360;
+        
+        particle.textContent = symbol;
+        particle.style.cssText = `
+            position: fixed;
+            left: ${x + offsetX}px;
+            top: ${y + offsetY}px;
+            font-size: ${size}px;
+            font-family: 'JetBrains Mono', 'Times New Roman', serif;
+            color: ${color};
+            pointer-events: none;
+            z-index: 9999;
+            text-shadow: 0 0 10px ${color};
+            animation: mathFloat ${duration}ms ease-out forwards;
+            --moveX: ${moveX}px;
+            --moveY: ${moveY}px;
+            --rotation: ${rotation}deg;
+        `;
+        
+        particleContainer.appendChild(particle);
+        
+        // Remove particle after animation
+        setTimeout(() => {
+            particle.remove();
+        }, duration);
+    };
+    
+    // Handle mouse movement
+    document.addEventListener('mousemove', (e) => {
+        if (throttle) return;
+        
+        // Calculate distance moved
+        const distance = Math.sqrt(
+            Math.pow(e.clientX - lastX, 2) + 
+            Math.pow(e.clientY - lastY, 2)
+        );
+        
+        // Only create particles if cursor moved enough
+        if (distance > 30) {
+            // Create 1-2 particles
+            const numParticles = 1 + Math.floor(Math.random() * 2);
+            for (let i = 0; i < numParticles; i++) {
+                setTimeout(() => createParticle(e.clientX, e.clientY), i * 50);
+            }
+            
+            lastX = e.clientX;
+            lastY = e.clientY;
+            
+            // Throttle to prevent too many particles
+            throttle = true;
+            setTimeout(() => throttle = false, 60);
+        }
+    });
+    
+    // Add keyframes for the animation
+    const mathStyle = document.createElement('style');
+    mathStyle.textContent = `
+        @keyframes mathFloat {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--moveX), var(--moveY)) rotate(var(--rotation)) scale(0.5);
+            }
+        }
+    `;
+    document.head.appendChild(mathStyle);
+};
+
+// Only add cursor effects on desktop
 if (window.innerWidth > 768) {
     createCursorGlow();
+    createMathCursorTrail();
 }
 
 // ===== Card Tilt Effect =====
