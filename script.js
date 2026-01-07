@@ -8,8 +8,6 @@ const projectCards = document.querySelectorAll('.project-card');
 const statNumbers = document.querySelectorAll('.stat-number');
 
 // ===== Navbar Scroll Effect =====
-let lastScrollY = window.scrollY;
-
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
     
@@ -19,15 +17,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
-    
-    // Hide/show navbar on scroll
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
-    
-    lastScrollY = currentScrollY;
 });
 
 // ===== Mobile Navigation Toggle =====
@@ -62,27 +51,75 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== Active Navigation Link Highlight =====
 const sections = document.querySelectorAll('section[id]');
+let currentActiveLink = null;
 
 function highlightNavLink() {
     const scrollY = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    
+    // Find the section that's most visible in the viewport
+    let activeSection = null;
+    let maxVisibility = 0;
     
     sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const sectionHeight = rect.height;
         
-        if (navLink) {
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink.classList.add('active');
-            } else {
-                navLink.classList.remove('active');
-            }
+        // Calculate how much of the section is visible
+        const visibleTop = Math.max(0, sectionTop);
+        const visibleBottom = Math.min(windowHeight, sectionBottom);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+        const visibilityRatio = visibleHeight / Math.min(sectionHeight, windowHeight);
+        
+        // Check if section is in the top half of viewport (better UX)
+        const isInTopHalf = sectionTop < windowHeight * 0.5 && sectionBottom > 100;
+        
+        if (isInTopHalf && visibilityRatio > maxVisibility) {
+            maxVisibility = visibilityRatio;
+            activeSection = section;
         }
     });
+    
+    // Update active states
+    if (activeSection) {
+        const sectionId = activeSection.getAttribute('id');
+        // Find nav link by data-section attribute
+        const navLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+        
+        if (navLink && navLink !== currentActiveLink) {
+            // Remove active class from previous link with animation
+            if (currentActiveLink) {
+                currentActiveLink.classList.remove('active');
+            }
+            
+            // Add active class to new link
+            navLink.classList.add('active');
+            currentActiveLink = navLink;
+        }
+    } else if (scrollY < 100) {
+        // At the very top, remove all active states
+        if (currentActiveLink) {
+            currentActiveLink.classList.remove('active');
+            currentActiveLink = null;
+        }
+    }
 }
 
-window.addEventListener('scroll', highlightNavLink);
+// Throttled scroll handler for better performance
+let scrollTimeout;
+function throttledHighlight() {
+    if (!scrollTimeout) {
+        scrollTimeout = setTimeout(() => {
+            highlightNavLink();
+            scrollTimeout = null;
+        }, 10);
+    }
+}
+
+window.addEventListener('scroll', throttledHighlight);
+highlightNavLink(); // Initial check
 
 // ===== Project Filter =====
 filterBtns.forEach(btn => {
@@ -460,11 +497,6 @@ style.textContent = `
             max-width: 100%;
             opacity: 1;
         }
-    }
-    
-    .nav-link.active {
-        color: var(--accent-secondary) !important;
-        background: var(--accent-glow);
     }
     
     body:not(.loaded) {
