@@ -8,6 +8,8 @@ const projectCards = document.querySelectorAll('.project-card');
 const statNumbers = document.querySelectorAll('.stat-number');
 
 // ===== Navbar Scroll Effect =====
+const scrollIndicator = document.querySelector('.scroll-indicator');
+
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
     
@@ -16,6 +18,15 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+    
+    // Hide scroll indicator after user starts scrolling
+    if (scrollIndicator && currentScrollY > 100) {
+        scrollIndicator.style.opacity = '0';
+        scrollIndicator.style.visibility = 'hidden';
+    } else if (scrollIndicator) {
+        scrollIndicator.style.opacity = '1';
+        scrollIndicator.style.visibility = 'visible';
     }
 });
 

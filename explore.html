@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | BSDS Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">BSDS</span>
+                <span class="logo-sub">ISI Bangalore</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="explore.html" class="nav-link" data-section="explore">Explore</a></li>
+                <li><a href="about.html" class="nav-link" data-section="about">About</a></li>
+                <li><a href="projects.html" class="nav-link" data-section="projects">Projects & Research</a></li>
+                <li><a href="talks.html" class="nav-link" data-section="talks">Talks</a></li>
+                <li><a href="blog.html" class="nav-link" data-section="blog">Blog</a></li>
+                <li><a href="events.html" class="nav-link" data-section="events">Events</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section explore" style="margin-top:80px;min-height:100vh;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Explore</span>
+                <h2 class="section-title">Community Stats & Insights</h2>
+                <p class="section-desc">Data-driven insights about our BSDS community</p>
+            </div>
+
+            <!-- OS Distribution -->
+            <div class="stats-grid">
+                <div class="stat-card large">
+                    <h3 class="stat-card-title">Operating System Distribution</h3>
+                    <div class="chart-container">
+                        <div class="bar-chart" id="os-chart">
+                            <div class="bar-item linux-bar" data-value="30">
+                                <div class="bar-fill" style="--bar-color: #6366f1; --bar-width: 30%;"></div>
+                                <div class="bar-label">
+                                    <span class="os-name">Linux</span>
+                                    <span class="os-percent">30%</span>
+                                </div>
+                                <!-- Linux Distros Popup -->
+                                <div class="distro-popup">
+                                    <div class="distro-popup-title">Linux Distributions Used</div>
+                                    <div class="distro-list">
+                                        <div class="distro-item">
+                                            <img src="https://cdn.simpleicons.org/ubuntu/E95420" alt="Ubuntu" class="distro-logo">
+                                            <span class="distro-name">Ubuntu</span>
+                                            <span class="distro-percent">28%</span>
+                                        </div>
+                                        <div class="distro-item">
+                                            <img src="https://cdn.simpleicons.org/archlinux/1793D1" alt="Arch Linux" class="distro-logo">
+                                            <span class="distro-name">Arch Linux</span>
+                                            <span class="distro-percent">22%</span>
+                                        </div>
+                                        <div class="distro-item">
+                                            <img src="https://cdn.simpleicons.org/zorin/15A6F0" alt="Zorin OS" class="distro-logo">
+                                            <span class="distro-name">Zorin OS</span>
+                                            <span class="distro-percent">15%</span>
+                                        </div>
+                                        <div class="distro-item">
+                                            <img src="https://simpleicons.org/icons/codio.svg" alt="CachyOS" class="distro-logo">
+                                            <span class="distro-name">CachyOS</span>
+                                            <span class="distro-percent">12%</span>
+                                        </div>
+                                        <div class="distro-item">
+                                            <img src="https://cdn.simpleicons.org/endeavouros/7B3DB5" alt="EndeavourOS" class="distro-logo">
+                                            <span class="distro-name">EndeavourOS</span>
+                                            <span class="distro-percent">10%</span>
+                                        </div>
+                                        <div class="distro-item">
+                                            <img src="https://cdn.simpleicons.org/debian/A81D33" alt="Debian" class="distro-logo">
+                                            <span class="distro-name">Debian</span>
+                                            <span class="distro-percent">8%</span>
+                                        </div>
+                                        <div class="distro-item">
+                                            <img src="https://cdn.simpleicons.org/fedora/51A2DA" alt="Fedora" class="distro-logo">
+                                            <span class="distro-name">Fedora</span>
+                                            <span class="distro-percent">5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bar-item" data-value="60">
+                                <div class="bar-fill" style="--bar-color: #818cf8; --bar-width: 60%;"></div>
+                                <div class="bar-label">
+                                    <span class="os-name">Windows</span>
+                                    <span class="os-percent">60%</span>
+                                </div>
+                            </div>
+                            <div class="bar-item" data-value="10">
+                                <div class="bar-fill" style="--bar-color: #a78bfa; --bar-width: 10%;"></div>
+                                <div class="bar-label">
+                                    <span class="os-name">macOS</span>
+                                    <span class="os-percent">10%</span>
+                                </div>
+                            </div>
+                            <div class="bar-item" data-value="2">
+                                <div class="bar-fill" style="--bar-color: #c4b5fd; --bar-width: 2%;"></div>
+                                <div class="bar-label">
+                                    <span class="os-name">Other</span>
+                                    <span class="os-percent">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="stat-card">
+                    <h3 class="stat-card-title">Most Used Languages</h3>
+                    <div class="lang-list">
+                        <div class="lang-item">
+                            <span class="lang-name">Python</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 90%;"></div>
+                            </div>
+                            <span class="lang-percent">90%</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">R</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 95%;"></div>
+                            </div>
+                            <span class="lang-percent">95%</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">SQL</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 65%;"></div>
+                            </div>
+                            <span class="lang-percent">65%</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">Julia</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 32%;"></div>
+                            </div>
+                            <span class="lang-percent">32%</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">JavaScript</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 28%;"></div>
+                            </div>
+                            <span class="lang-percent">28%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Frameworks -->
+                <div class="stat-card">
+                    <h3 class="stat-card-title">Popular Tools</h3>
+                    <div class="tools-grid">
+                        <div class="tool-badge">PyTorch</div>
+                        <div class="tool-badge">Scikit-learn</div>
+                        <div class="tool-badge">Pandas</div>
+                        <div class="tool-badge">NumPy</div>
+                        <div class="tool-badge">TensorFlow</div>
+                        <div class="tool-badge">Jupyter</div>
+                        <div class="tool-badge">Git</div>
+                        <div class="tool-badge">Docker</div>
+                        <div class="tool-badge">Matplotlib</div>
+                        <div class="tool-badge">VS Code</div>
+                        <div class="tool-badge">LaTeX</div>
+                        <div class="tool-badge">Hyprland</div>
+                        <div class="tool-badge">Anaconda</div>
+                        <div class="tool-badge">Tableau</div>
+                    </div>
+                </div>
+
+                <!-- Text Editor Distribution -->
+                <div class="stat-card">
+                    <h3 class="stat-card-title">Favorite Code Editors</h3>
+                    <div class="editor-list">
+                        <div class="editor-item">
+                            <span class="editor-icon">📝</span>
+                            <span class="editor-name">VS Code</span>
+                            <span class="editor-percent">56%</span>
+                        </div>
+                        <div class="editor-item">
+                            <span class="editor-icon">💻</span>
+                            <span class="editor-name">PyCharm</span>
+                            <span class="editor-percent">22%</span>
+                        </div>
+                        <div class="editor-item">
+                            <span class="editor-icon">⌨️</span>
+                            <span class="editor-name">Jupyter</span>
+                            <span class="editor-percent">12%</span>
+                        </div>
+                        <div class="editor-item">
+                            <span class="editor-icon">📓</span>
+                            <span class="editor-name">Vim/Neovim</span>
+                            <span class="editor-percent">10%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Heatmap -->
+                <div class="stat-card large">
+                    <h3 class="stat-card-title">Community Activity Heatmap</h3>
+                    <div class="heatmap-grid">
+                        <div class="heatmap-row">
+                            <span class="day-label">Mon</span>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="4"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                        </div>
+                        <div class="heatmap-row">
+                            <span class="day-label">Tue</span>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="4"></div>
+                            <div class="heatmap-cell" data-level="4"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                        </div>
+                        <div class="heatmap-row">
+                            <span class="day-label">Wed</span>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="4"></div>
+                            <div class="heatmap-cell" data-level="4"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                        </div>
+                        <div class="heatmap-row">
+                            <span class="day-label">Thu</span>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="4"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                        </div>
+                        <div class="heatmap-row">
+                            <span class="day-label">Fri</span>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                        </div>
+                        <div class="heatmap-row">
+                            <span class="day-label">Sat</span>
+                            <div class="heatmap-cell" data-level="1"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="3"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                            <div class="heatmap-cell" data-level="0"></div>
+                        </div>
+                        <div class="heatmap-row">
+                            <span class="day-label">Sun</span>
+                            <div class="heatmap-cell" data-level="1"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="2"></div>
+                            <div class="heatmap-cell" data-level="1"></div>
+                            <div class="heatmap-cell" data-level="0"></div>
+                        </div>
+                    </div>
+                    <div class="heatmap-legend">
+                        <span>Less</span>
+                        <div class="legend-cell" data-level="0"></div>
+                        <div class="legend-cell" data-level="1"></div>
+                        <div class="legend-cell" data-level="2"></div>
+                        <div class="legend-cell" data-level="3"></div>
+                        <div class="legend-cell" data-level="4"></div>
+                        <span>More</span>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stat-card">
+                    <h3 class="stat-card-title">Quick Stats</h3>
+                    <div class="quick-stats">
+                        <div class="quick-stat-item">
+                            <span class="quick-stat-value">44</span>
+                            <span class="quick-stat-label">Active Members</span>
+                        </div>
+                        <div class="quick-stat-item">
+                            <span class="quick-stat-value">4</span>
+                            <span class="quick-stat-label">Ongoing Projects</span>
+                        </div>
+                        <div class="quick-stat-item">
+                            <span class="quick-stat-value">100%</span>
+                            <span class="quick-stat-label">Use GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">BSDS</span>
+                        <span class="logo-sub">ISI Bangalore</span>
+                    </div>
+                    <p class="footer-desc">A student-led community dedicated to excellence in statistical data science.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BSDS Community, ISI Bangalore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
