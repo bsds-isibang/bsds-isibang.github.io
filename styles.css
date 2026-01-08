@@ -13,7 +13,7 @@
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(135deg, #ec4899, #f59e0b, #a855f7);
+    background: linear-gradient(135deg, #ee3c95, #f6a71d, #9b31fd);
     background-size: 200% 200%;
     border-radius: 50px;
     text-decoration: none;
@@ -121,7 +121,7 @@
 
 @media (max-width: 768px) {
     .featured-btn-wrapper {
-        top: 70px;
+        top: 100px;
         right: 16px;
     }
     
