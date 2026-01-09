@@ -1,1 +1,0 @@
-the featured button is hiding unde navbar in phone, but it is okay in computer screen. Fix it
