@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISI Bangalore — BSDS Placement Brochure 2026–27</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --dark:#1a1f2e;
+  --darker:#111520;
+  --orange:#F5A623;
+  --orange2:#E8920F;
+  --orange-light:#FBC95A;
+  --white:#FFFFFF;
+  --offwhite:#F7F5F0;
+  --gray:#F0EDE8;
+  --text:#2C2C2C;
+  --muted:#6B6B6B;
+  --mid:#D5D0C8;
+}
+
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#D8D5CF;font-size:10.5pt;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+@page{size:A4 portrait;margin:0;}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:var(--white);}
+.page:last-child{page-break-after:avoid;}
+@media screen{body{background:#C8C5BF;}.page{margin:24px auto;box-shadow:0 8px 40px rgba(0,0,0,0.25);}}
+@media print{body{margin:0;background:white;}.page{margin:0;box-shadow:none;}}
+
+/* ── COVER PAGE ── */
+.cover{background:var(--dark);color:var(--white);display:flex;flex-direction:column;justify-content:space-between;}
+.cover-top-bar{height:6px;background:linear-gradient(90deg,var(--orange),var(--orange2),var(--orange-light),var(--orange));}
+.cover-header{padding:14mm 14mm 0;display:flex;align-items:center;gap:14px;}
+
+/* Logo CSS */
+/*.cover-logo-ring{width:62px;height:62px;border:2.5px solid var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.cover-logo-ring img{width:100%;height:100%;object-fit:cover;}*/
+
+.cover-inst{display:flex;flex-direction:column;}
+.cover-inst .inst-main{font-family:'Oswald',sans-serif;font-size:14pt;font-weight:500;color:var(--white);letter-spacing:0.04em;}
+.cover-inst .inst-sub{font-family:'DM Sans',sans-serif;font-size:8.5pt;color:var(--orange-light);letter-spacing:0.08em;margin-top:2px;}
+
+.cover-middle{position:relative;flex:1;display:flex;align-items:flex-end;padding:0 14mm 0;}
+
+/* Diagonal Background CSS */
+.cover-diagonal{position:absolute;top:0;right:0;width:55%;height:100%;clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);overflow:hidden;}
+.cover-diagonal-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;object-position: 55% 50%;}
+.cover-diagonal-inner{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(160deg,var(--orange) 0%,var(--orange2) 100%);opacity:0.2;z-index:2;}
+
+/* Text and Typography CSS (This is what went missing) */
+.cover-text{position:relative;z-index:2;padding-bottom:8mm;}
+.cover-eyebrow{font-family:'DM Sans',sans-serif;font-size:8pt;text-transform:uppercase;letter-spacing:0.22em;color:var(--orange-light);margin-bottom:7mm;}
+.cover-title{font-family:'Oswald',sans-serif;font-size:44pt;font-weight:700;line-height:1.0;color:var(--white);text-transform:uppercase;margin-bottom:6mm;}
+.cover-title span{color:var(--orange);}
+.cover-rule{width:60px;height:3px;background:var(--orange);margin-bottom:7mm;}
+.cover-tagline{font-family:'Source Serif 4',serif;font-size:12.5pt;font-style:italic;color:rgba(255,255,255,0.82);line-height:1.4;}
+
+/* Stats Layout CSS */
+.cover-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,0.12);}
+.cover-stat{flex:1;padding:8mm 14mm;border-right:1px solid rgba(255,255,255,0.12);}
+.cover-stat:last-child{border-right:none;}
+.cover-stat .num{font-family:'Oswald',sans-serif;font-size:22pt;font-weight:600;color:var(--orange);}
+.cover-stat .lbl{font-size:7.5pt;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.55);margin-top:2px;}
+.cover-bottom-bar{height:6px;background:linear-gradient(90deg,var(--orange),var(--orange2),var(--orange-light),var(--orange));}
+/* ── INNER PAGE HEADER ── */
+.ph{display:flex;justify-content:space-between;align-items:center;padding:7mm 12mm 5mm;border-bottom:2px solid var(--dark);}
+.ph-left{display:flex;align-items:center;gap:10px;}
+.ph-logo{width:26px;height:26px;border:2px solid var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:7pt;font-weight:600;color:var(--dark);}
+.ph-name{font-family:'Oswald',sans-serif;font-size:9pt;font-weight:500;color:var(--dark);text-transform:uppercase;letter-spacing:0.08em;}
+.ph-section{font-family:'DM Sans',sans-serif;font-size:7.5pt;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;}
+
+/* ── FOOTER ── */
+.pf{position:absolute;bottom:0;left:0;right:0;padding:4mm 12mm;display:flex;justify-content:space-between;align-items:center;font-size:7pt;color:var(--muted);}
+.pf-bar{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--dark),var(--orange));}
+
+/* ── CONTENT ── */
+.content{padding:6mm 12mm 18mm;}
+.sec-title{display:flex;align-items:center;gap:10px;margin-bottom:5mm;}
+.sec-title .blk{width:5px;height:28px;background:var(--orange);}
+.sec-title h2{font-family:'Oswald',sans-serif;font-size:19pt;font-weight:600;color:var(--dark);text-transform:uppercase;letter-spacing:0.04em;}
+
+/* ── ORANGE BAND SECTION HEADER ── */
+.orange-band{background:var(--orange);padding:10px 14px;margin-bottom:4mm;clip-path:polygon(0 0,100% 0,96% 100%,0 100%);}
+.orange-band h3{font-family:'Oswald',sans-serif;font-size:13pt;font-weight:600;color:var(--dark);text-transform:uppercase;letter-spacing:0.06em;}
+
+/* ── DARK BANNER ── */
+.dark-banner{background:var(--dark);color:var(--white);padding:14px 18px;border-radius:4px;}
+.dark-banner strong{color:var(--orange);}
+
+/* ── CARDS ── */
+.card{background:var(--white);border:1px solid var(--mid);border-radius:4px;padding:12px 14px;}
+.card.orange-left{border-left:4px solid var(--orange);}
+.card.dark-left{border-left:4px solid var(--dark);}
+.card.elevated{box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+.card h4{font-family:'Oswald',sans-serif;font-size:10.5pt;font-weight:500;color:var(--dark);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;}
+.card p{font-size:8.5pt;color:var(--muted);line-height:1.5;}
+
+/* ── STAT CARD ── */
+.stat-box{background:var(--offwhite);border:1px solid var(--mid);padding:10px 14px;text-align:center;}
+.stat-box .n{font-family:'Oswald',sans-serif;font-size:24pt;font-weight:700;color:var(--dark);line-height:1;}
+.stat-box .l{font-size:7.5pt;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:3px;}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:4mm;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;}
+
+/* ── BADGES ── */
+.badge{display:inline-block;padding:4px 11px;border-radius:2px;font-size:8pt;font-weight:500;margin:2px;}
+.badge.dark{background:var(--dark);color:var(--white);}
+.badge.orange{background:var(--orange);color:var(--dark);}
+.badge.outline{border:1.5px solid var(--dark);color:var(--dark);background:transparent;}
+
+/* ── ROLE CARD ── */
+.role-box{background:var(--dark);color:var(--white);border-bottom:3px solid var(--orange);border-radius:4px;padding:12px 8px;text-align:center;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.06em;font-size:10pt;box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+
+/* ── CURRICULUM CARDS ── */
+.curr-card{background:var(--white);border:1px solid var(--mid);border-radius:6px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);height:100%;}
+.curr-title{background:var(--dark);color:var(--white);font-family:'Oswald',sans-serif;font-size:11pt;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;padding:10px 14px;text-align:center;}
+.curr-title.orange{background:var(--orange);color:var(--dark);}
+.curr-card ul{padding:10px 12px 10px 24px;margin:0;list-style-type:square;font-size:8.5pt;color:var(--text);line-height:1.6;}
+.curr-card ul li{margin-bottom:3px;}
+.curr-card ul.bold-list{font-weight:700;font-size:9pt;color:var(--dark);}
+
+/* ── PROFILE CARD ── */
+.prof-card{border:1px solid var(--mid);border-radius:4px;padding:6px 8px;display:flex;gap:8px;align-items:center;background:var(--white);}
+.prof-photo{width:32px;height:32px;flex-shrink:0;background:var(--gray);border-radius:4px;overflow:hidden;border:2px solid var(--orange);}
+.prof-photo img{width:100%;height:100%;object-fit:cover;}
+.prof-info{flex:1;}
+.prof-info h4{font-family:'Oswald',sans-serif;font-size:8.5pt;font-weight:500;color:var(--dark);margin-bottom:2px;}
+.prof-info p{font-size:7pt;color:var(--muted);line-height:1.2;}
+
+/* ── CONTACT ── */
+.contact-card{background:var(--offwhite);border:1px solid var(--mid);border-radius:4px;padding:14px 18px;}
+.contact-card h4{font-family:'Oswald',sans-serif;font-size:10pt;font-weight:500;color:var(--dark);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
+.cr{display:flex;gap:8px;align-items:flex-start;margin-bottom:5px;font-size:9pt;}
+.cr .lbl{font-weight:600;color:var(--dark);min-width:55px;}
+
+/* ── DIAGONAL SECTION DIVIDER ── */
+.diag-header{position:relative;background:var(--dark);color:var(--white);padding:16px 18px 16px;margin-bottom:5mm;overflow:hidden;}
+.diag-header::after{content:'';position:absolute;right:-1px;top:0;width:35%;height:100%;background:var(--orange);clip-path:polygon(35% 0,100% 0,100% 100%,0 100%);}
+.diag-header h3{font-family:'Oswald',sans-serif;font-size:13pt;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;position:relative;z-index:1;}
+
+.divider{width:100%;height:1px;background:var(--mid);margin:3mm 0;}
+.divider.orange{height:2px;background:linear-gradient(90deg,var(--orange),transparent);}
+
+/* ensure faculty page fits without cutting */
+.page .content.faculty-content{padding-bottom:22mm;}
+</style>
+</head>
+<body>
+<div class="page cover">
+  <div class="cover-top-bar"></div>
+  <div class="cover-header">
+    
+    <div class="cover-logo-ring">
+        <img src="ISI.jpg" alt="ISI Logo">
+    </div>
+    
+    <div class="cover-inst">
+      <span class="inst-main">Indian Statistical Institute</span>
+      <span class="inst-sub">Bangalore Centre</span>
+    </div>
+  </div>
+
+  <div class="cover-middle">
+    <div class="cover-diagonal">
+        
+        <img class="cover-diagonal-img" src="ISI_B_C5.jpg" alt="Background Graphic">
+        
+        <div class="cover-diagonal-inner"></div>
+    </div>
+    <div class="cover-text">
+      <div class="cover-eyebrow">Placement Brochure 2026 – 27</div>
+      <div class="cover-title">Bachelor<br>of<br><span>Statistical</span><br>Data Science</div>
+      <div class="cover-rule"></div>
+      <div class="cover-tagline">Where Statistical Rigour Meets<br>data driven Innovation</div>
+    </div>
+  </div>
+
+  <div>
+      
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="num">4-Year</div><div class="lbl">Honours Programme</div></div>
+      <div class="cover-stat"><div class="num">1931</div><div class="lbl">Established</div></div>
+    </div>
+    
+    <div style="padding: 10mm 14mm 6mm; text-align: center; font-size: 7.5pt; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; background: rgba(0,0,0,0.2);">
+      Institution of National Importance, Since 1959 &nbsp;|&nbsp; www.isibang.ac.in
+    </div>
+  </div>
+  <div class="cover-bottom-bar"></div>
+</div>
+
+<div class="page">
+  <div class="ph">
+    <div class="ph-left"><div class="ph-logo">ISI</div><span class="ph-name">Indian Statistical Institute</span></div>
+    <span class="ph-section">About the Institute</span>
+  </div>
+  <div class="content">
+    <div class="sec-title"><div class="blk"></div><h2>About ISI Bangalore</h2></div>
+    <p style="font-size:10pt;line-height:1.65;margin-bottom:5mm;color:var(--text);">
+      The <strong>Indian Statistical Institute (ISI)</strong>, founded in 1931 by
+      <strong>Professor Prasanta Chandra Mahalanobis</strong>, is one of the world's oldest and most
+      prestigious institutions dedicated to statistics, mathematics, and data science. Recognised as an
+      <strong>Institution of National Importance</strong> by the Government of India through an Act of
+      Parliament (1959, ISI has shaped the analytical foundations of modern India from national economic
+      planning to cutting-edge research.
+    </p>
+    <p style="font-size:10pt;line-height:1.65;margin-bottom:6mm;color:var(--text);">
+      The <strong>Bangalore Centre</strong>, established in 1978, extends ISI's legacy into one of India's
+      most vibrant technology and research ecosystems. Situated in the heart of India's Silicon Valley, the
+      centre maintains active research groups in Statistics, Mathematics, System science and 
+      Quality Management and Library sciences.
+    </p>
+
+    <div class="g2" style="margin-bottom:6mm;">
+      <div class="stat-box"><div class="n">1931</div><div class="l">Founded by P.C. Mahalanobis</div></div>
+      <!-- <div class="stat-box"><div class="n">≈ 2%</div><div class="l">Acceptance Rate</div></div> -->
+      <div class="stat-box"><div class="n">1959</div><div class="l">Act of Parliament</div></div>
+    </div>
+
+    <div class="divider orange"></div>
+    <div class="diag-header"><h3>Research Excellence</h3></div>
+    <p style="font-size:9.5pt;line-height:1.6;margin-bottom:5mm;color:var(--muted);">
+      ISI Bangalore houses distinguished research units spanning Theoretical Statistics &amp;
+      Mathematics, Applied Statistics, Computer Science, and Quality, Reliability &amp; Operations Research.
+      Faculty are renowned for publishing in top-tier journals and collaborating with global research institutions.
+    </p>
+
+    <div class="g2" style="margin-bottom:5mm;">
+      <div class="card orange-left elevated">
+        <h4>Academic Heritage</h4>
+        <p>90+ years of contribution to statistical science. Home to pioneers of multivariate analysis, design of experiments, and econometric modelling.</p>
+      </div>
+      <div class="card dark-left elevated">
+        <h4>Global Recognition</h4>
+        <p>ISI degrees are recognised worldwide. Alumni lead data science teams at major technology firms, financial institutions, and research organisations across the globe.</p>
+      </div>
+    </div>
+
+    <div class="dark-banner">
+      <div style="font-family:'Oswald',sans-serif;font-size:11pt;font-weight:500;margin-bottom:4px;color:var(--orange);text-transform:uppercase;letter-spacing:0.06em;">
+        National Entrance Examination
+      </div>
+      <p style="font-size:8.5pt;line-height:1.55;opacity:0.9;">
+        Admission to ISI programmes is conducted through a rigorous national-level selection process, ensuring that only the most analytically seasoned students are admitted. For the BSDS program, students are selected from across India based on merit lists derived from national examinations: JEE Main and CUET. This provides a direct opportunity for students appearing in these exams nationwide to compete for admission.
+        The process emphasizes strong mathematical reasoning, statistical intuition, and problem-solving ability, and hence attracting and identifying top talent from all parts of the country.
+      </p>
+    </div>
+    <div class="divider orange" style="margin:2.5mm 0;"></div>
+
+<div class="orange-band">
+  <h3 style="font-size:11pt; margin:0;">About the Students</h3>
+</div>
+
+
+<div class="card dark-left elevated" style="padding:9px 12px;">
+  <p style="font-size:7.8pt; line-height:1.4; color:var(--text); margin-bottom:2mm;">
+    BSDS students at ISI Bangalore are trained in 
+    <strong>mathematics, statistics, and computation</strong>, with strong analytical and problem solving skills. 
+    <strong>25 students</strong>, ensuring focused academic development.
+  </p>
+
+  <p style="font-size:7.8pt; line-height:1.4; color:var(--muted); margin:0;">
+    <strong>Availability:</strong> Summer internships (May–June) and Winter internships (December).
+  </p>
+</div>    
+  </div>
+  <div class="pf"><span>ISI Bangalore &nbsp;·&nbsp; BSDS Placement Brochure 2026–27</span><span>02</span><div class="pf-bar"></div></div>
+</div>
+
+
+
+<div class="page">
+  <div class="ph">
+    <div class="ph-left"><div class="ph-logo">ISI</div><span class="ph-name">Indian Statistical Institute</span></div>
+    <span class="ph-section">The Programme</span>
+  </div>
+  <div class="content">
+    <div class="sec-title"><div class="blk"></div><h2>The BSDS Programme</h2></div>
+    <!-- Updated BSDS description with flexible exit options -->
+    <p style="font-size:10pt;line-height:1.65;margin-bottom:3mm;">
+      The <strong>Bachelor of Statistical Data Science (Honours)</strong> is a four-year undergraduate
+      programme designed to train students into industry ready data scientists capable of undertaking the needs of the industry and able to transform
+      raw data into reliable insights, building predictive models, and communicating results effectively.
+    </p>
+    <p style="font-size:10pt;line-height:1.65;margin-bottom:4mm;">
+      <strong>Flexible exit options:</strong> Students may exit after 3 years with a Bachelor’s degree,
+      complete 4 years to earn the BSDS (Honours) degree, or go on with a 5th year for an Integrated Master’s
+      degree, allowing students and companies to interact with each other at different levels.
+    </p>
+
+    <div style="background:var(--offwhite);border:1px solid var(--mid);padding:14px 18px;margin-bottom:5mm;border-radius:4px;">
+      <div style="font-family:'Oswald',sans-serif;font-size:9pt;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange2);margin-bottom:6px;">Programme Objective</div>
+      <p style="font-size:9.5pt;line-height:1.6;color:var(--text);">
+        To make graduates with deep foundations in <strong>Mathematics, Statistics, and Computing</strong> equipping them with expertise in statistical modelling, machine learning, optimization, data management, and real life problem solving for modern data driven industries.
+      </p>
+    </div>
+
+    
+    <div class="orange-band"><h3>Core Domains</h3></div>
+    <div class="g2" style="margin-bottom:5mm;">
+      <div class="card elevated" style="border-top:3px solid var(--dark);">
+        <h4>Statistics &amp; Probability</h4>
+        <p>From data exploration, regression and inference to Bayesian methods, time series, multivariate analysis, and advanced resampling students develop strong real life based statistical skills.</p>
+      </div>
+      <div class="card elevated" style="border-top:3px solid var(--orange);">
+        <h4>Mathematics</h4>
+        <!-- fixed "calculas" to "calculus" -->
+        <p>Four semesters of rigorous mathematics covering linear algebra, real analysis, graph theory, topology, differential equations, vector calculus and optimization & numerical methods building the quantitative backbone for advanced modelling.</p>
+      </div>
+      <div class="card elevated" style="border-top:3px solid var(--dark);">
+        <h4>Computing &amp; Data Engineering</h4>
+        <p>Data structures, algorithms, database management, R &amp; Python programming, GPU computing, and distributed systems ensuring computational rigor alongside statistical depth.</p>
+      </div>
+      <div class="card elevated" style="border-top:3px solid var(--orange);">
+        <h4>Interdisciplinary Electives</h4>
+        <p>Causal Inference, Actuarial Statistics, Survival Analysis, Clinical Trials, Statistical Physics, Genetics &amp; Bioinformatics, Statistical Finance broadening analytical perspectives across real world domains.</p>
+      </div>
+    </div>
+
+    <div class="divider orange"></div>
+    <div class="g2">
+      <div>
+        <h4 style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;margin-bottom:3px;color:var(--dark);">Experiential Focus</h4>
+        <p style="font-size:8.5pt;color:var(--muted);line-height:1.5;">
+          The programme combines rigorous theory with real world learning through data science projects, industry internships, and project work involving modern tools used in data driven decision-making across sectors.
+        </p>
+      </div>
+      <div>
+        <h4 style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;margin-bottom:3px;color:var(--dark);">Industry Relevance</h4>
+        <p style="font-size:8.5pt;color:var(--muted);line-height:1.5;">
+          Graduates are prepared for professional roles in Data Science, Quantitative Analytics, Machine Learning Engineering, and Research with the rare blend of statistical depth and computational proficiency that top employers seek.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="pf"><span>ISI Bangalore &nbsp;·&nbsp; BSDS Placement Brochure 2026–27</span><span>03</span><div class="pf-bar"></div></div>
+</div>
+
+<div class="page">
+  <div class="ph">
+    <div class="ph-left"><div class="ph-logo">ISI</div><span class="ph-name">Indian Statistical Institute</span></div>
+    <span class="ph-section">Curriculum</span>
+  </div>
+  <div class="content">
+    <div class="sec-title"><div class="blk"></div><h2>Curriculum</h2></div>
+    <p style="font-size:9pt;color:var(--muted);margin-bottom:5mm;">
+      Eight semesters of carefully designed coursework spanning statistics, mathematics, computing, and domain electives.
+    </p>
+
+    <div class="g3" style="align-items: start; margin-bottom: 5mm; gap: 5mm;">
+      <div class="curr-card">
+        <div class="curr-title orange">Mathematics</div>
+        <ul>
+          <li>Optimization</li>
+          <li>Linear Algebra</li>
+          <li>Multivariate Calculus</li>
+          <li>Numerical Analysis</li>
+          <li>Differential Equations</li>
+          <li>Real Analysis</li>
+          <li>Graph Theory</li>
+          <li>Topology</li>
+        </ul>
+      </div>
+
+      <div class="curr-card">
+        <div class="curr-title orange">Statistics &amp; Probability</div>
+        <ul>
+          <li>Regression Techniques</li>
+          <li>Bayesian Inference</li>
+          <li>Statistical Models</li>
+          <li>Sampling &amp; Resampling</li>
+          <li>Stochastic Processes</li>
+          <li>Probability Theory</li>
+          <li>Timeseries &amp; Forecasting</li>
+          <li>Parametric Inference</li>
+          <li>Non-Parametric Inference</li>
+          <li>Discrete Data Analysis</li>
+          <li>Large Sample Methods</li>
+          <li>Multivariate Statistical Analysis</li>
+        </ul>
+      </div>
+
+      <div class="curr-card">
+        <div class="curr-title orange">Data Science</div>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Statistical Learning</li>
+          <li>Data Structure &amp; Algorithms</li>
+          <li>Database Management Systems</li>
+          <li>Natural Language Processing</li>
+          <li>Image Processing</li>
+          <li>Signal Processing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="g2" style="align-items: stretch; gap: 5mm;">
+      <div class="curr-card">
+        <div class="curr-title orange">Electives</div>
+        <ul class="bold-list" style="padding-top: 14px; padding-bottom: 14px;">
+          <li>Microeconomics</li>
+          <li>Macroeconomics</li>
+          <li>Statistical Mechanics</li>
+          <li>Biology</li>
+          <li>Earth System Sciences</li>
+        </ul>
+      </div>
+
+      <div class="curr-card">
+        <div class="curr-title" style="background: #e2c0e8; color: var(--dark); border-bottom: 2px solid var(--dark);">Curriculum of the 4th Year</div>
+        <ul>
+          <li>Deep Learning with GPU Programming</li>
+          <li>Distributed and Parallel Computing</li>
+          <li>Analysis of Algorithms for Big Data</li>   <!-- removed "& Network Data" -->
+        </ul>
+        <div style="text-align: center; font-family: 'Oswald', sans-serif; font-size: 11pt; font-weight: 600; text-transform: uppercase; border-top: 2px solid var(--dark); border-bottom: 2px solid var(--dark); margin: 0 14px; padding: 4px 0;">Electives</div>
+        <ul class="bold-list">
+          <li>Genetics and Bioinformatics</li>
+          <li>Statistical Finance</li>
+          <li>Clinical Trials</li>
+          <li>Sample Surveys & Design of Experiments</li>
+          <li>Statistical Quality Control and Operations</li>
+          <li>Causal Inference</li>
+          <li>Actuarial Statistics</li>
+          <li>Survival Analysis</li>
+          <li>Analysis of Network Data</li>  <!-- moved network data here -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider orange" style="margin:4mm 0;"></div>
+    
+    <div class="orange-band" style="margin-bottom:3mm;"><h3>Tools &amp; Technologies</h3></div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px;">
+      <span class="badge dark">Python</span>
+      <span class="badge dark">R</span>
+      <span class="badge dark">SQL</span>
+      <span class="badge dark">C / C++</span>
+      <span class="badge orange">TensorFlow</span>
+      <span class="badge orange">PyTorch</span>
+      <span class="badge orange">scikit-learn</span>
+      <span class="badge outline">NumPy</span>
+      <span class="badge outline">Pandas</span>
+      <span class="badge outline">Matplotlib</span>
+      <span class="badge dark">Git / GitHub</span>
+      <span class="badge outline">Jupyter</span>
+      <span class="badge outline">DBMS</span>
+      <span class="badge outline">GPU / CUDA</span>
+    </div>
+  </div>
+  <div class="pf"><span>ISI Bangalore &nbsp;·&nbsp; BSDS Placement Brochure 2026–27</span><span>04</span><div class="pf-bar"></div></div>
+</div>
+
+<div class="page">
+  <div class="ph">
+    <div class="ph-left"><div class="ph-logo">ISI</div><span class="ph-name">Indian Statistical Institute</span></div>
+    <span class="ph-section">Skills &amp; Roles</span>
+  </div>
+
+  
+  <div class="content">
+  <div class="sec-title"><div class="blk"></div><h2>Skills &amp; Competencies</h2></div>
+  <p style="font-size:9.5pt;color:var(--muted);margin-bottom:5mm;line-height:1.6;">
+    BSDS graduates are uniquely positioned at the intersection of statistical theory and computational
+    practice. Their skill set spans the full data science pipeline from formulating statistical
+    hypotheses to deploying machine learning models at scale.
+  </p>
+
+  <div class="g2" style="margin-bottom:5mm;">
+    
+    <div class="card dark-left elevated">
+      <h4>Statistical Thinking & Decision Making</h4>
+      <p>Ability to frame real world problems statistically, design experiments, interpret uncertainty, and draw reliable conclusions from complex data, while translating analytical results into clear, actionable insights through visualization, reports and application based narratives.</p>
+    </div>
+
+    <div class="card orange-left elevated">
+      <h4>Statistical & Deep Learning </h4>
+      <p>Hands on experience in designing and training Statistical & Deep Learning models using strong application knowledge of Probability & Statistics based on frameworks such as PyTorch and TensorFlow, with strong focus on performance and generalization.</p>
+    </div>
+
+    <div class="card dark-left elevated">
+      <h4>Time Series & Forecasting Analytics</h4>
+      <p>Experience in applying time series analysis, forecasting methods, and regression techniques to model temporal data, capture patterns, and derive actionable insights from structured and unstructured dataset.</p>
+    </div>
+
+    <div class="card orange-left elevated">
+      <h4>Quantitative Problem Solving</h4>
+      <p>Applying mathematical, statistical, and computational techniques including linear algebra, calculus, and optimization to model complex systems, analyze risks, and solve high value problems across finance, technology, and research domains.</p>
+    </div>
+  </div>
+    <div class="divider orange"></div>
+    <div class="orange-band"><h3>Roles We Fit In</h3></div>
+    <p style="font-size:9pt;color:var(--muted);margin-bottom:4mm;">
+      Our graduates are well suited for the following high-impact roles across various data driven industries.
+    </p>
+
+    <!-- Updated roles: removed MCMC, Bayesian Analysis, Time Series Analysis; added Risk Analyst, Data Analyst, Biostatistician, Actuarial Analyst, Statistician -->
+    <div class="g3" style="gap: 5mm; margin-bottom: 6mm;">
+      <div class="role-box">Data Scientist</div>
+      <div class="role-box">AI/ML Engineer</div>
+      <div class="role-box">Quantitative Strategist</div>
+      <div class="role-box">Risk Analyst</div>
+      <div class="role-box">Data Analyst</div>
+      <div class="role-box">Biostatistician</div>
+      <div class="role-box">Actuarial Analyst</div>
+      <div class="role-box">Statistician</div>
+      <div class="role-box">Econometrician</div>
+      <div class="role-box">Business Analyst</div>
+      <div class="role-box">AI Researcher</div>
+      <div class="role-box">Research Analyst</div>
+    </div>
+
+    <div class="dark-banner">
+      <p style="font-size:9pt;line-height:1.55;margin:0;">
+        <strong style="color:var(--orange);">What sets BSDS graduates apart:</strong> &nbsp;Our students bring <em>deep statistical thinking</em> to
+        every data problem. They understand not just <em>how</em> to apply an algorithm, but <em>why</em>
+        it works, <em>when</em> it fails, and <em>what</em> the uncertainty around a result truly means.
+      </p>
+    </div>
+  </div>
+  <div class="pf"><span>ISI Bangalore &nbsp;·&nbsp; BSDS Placement Brochure 2026–27</span><span>05</span><div class="pf-bar"></div></div>
+</div>
+<div class="page">
+  <div class="ph">
+    <div class="ph-left"><div class="ph-logo">ISI</div><span class="ph-name">Indian Statistical Institute</span></div>
+    <span class="ph-section">Academic Leadership</span>
+  </div>
+  <div class="content" style="display: flex; flex-direction: column; height: calc(100% - 20mm);">
+    <div class="sec-title"><div class="blk"></div><h2>Distinguished Faculty</h2></div>
+    <p style="font-size:10pt;color:var(--muted);margin-bottom:6mm;line-height:1.5;">
+      Our students are mentored by faculty with elite international knowledge and experience, known for research portfolios, and deep industry collaborations. They bring decades of academic excellence from the world's most prestigious institutions.
+    </p>
+
+    <div class="g2" style="gap: 5mm; flex-grow: 1;">
+      
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="JISHNU.jpg" alt="Dr. Jishnu Gupta Biswas" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Jishnu Gupta Biswas</h4>
+            <a href="https://isi.irins.org/profile/13204" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Mathematics, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="RITUPARNA.jpg" alt="Dr. Rituparna Sen" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Rituparna Sen</h4>
+            <a href="https://www.isibang.ac.in/~rsen/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, University of Chicago</p>
+        </div>
+      </div>
+
+
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="ANTAR.png" alt="Dr. Antar Bandyopadhyay" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Antar Bandyopadhyay</h4>
+            <a href="https://www.isid.ac.in/~antar/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, UC Berkeley, USA</p>
+        </div>
+      </div>
+      
+      
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="anish.png" alt="Dr. Anish Sarkar" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Anish Sarkar</h4>
+            <a href="https://www.isid.ac.in/~anish/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="PARTHANIL.png" alt="Dr. Parthanil Roy" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Parthanil Roy</h4>
+            <a href="https://sites.google.com/view/parthanilroy/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. OR & IE, Cornell University, USA</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="DEEPAYAN.jpg" alt="Dr. Deepayan Sarkar" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Deepayan Sarkar</h4>
+            <a href="https://www.isid.ac.in/~deepayan/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, University of Wisconsin-Madison</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="RAGHUNATH.jpeg" alt="Dr. Raghunath Chatterjee" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Raghunath Chatterjee</h4>
+            <a href="https://in.linkedin.com/in/raghunath-chatterjee-3a74b422" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Biology, Indian Institute of Chemical Biology</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="MINERVA.jpeg" alt="Dr. Minerva Mukhopadhyay" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Minerva Mukhopadhyay</h4>
+            <a href="https://sites.google.com/view/mmukhopadhyay/home" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="RAMIJ.jpeg" alt="Dr. Ramij Rahaman" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Ramij Rahaman</h4>
+            <a href="https://scholar.google.com/citations?user=bX19S74AAAAJ&hl=en" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Informatics, University of Bergen, Norway</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="DEBDIP.jpg" alt="Dr. Debdip Ganguly" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Debdip Ganguly</h4>
+            <a href="https://sites.google.com/site/debdipganguly02/home" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Mathematics TIFR-CAM</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="MANORANJAN.jpeg" alt="Dr. Manoranjan Pal" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Manoranjan Pal</h4>
+            <a href="https://scholar.google.com/citations?user=zeU16pkAAAAJ&hl=en" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="MALAY.jpeg" alt="Dr. Malay Bhattacharyya" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Malay Bhattacharyya</h4>
+            <a href="https://www.isical.ac.in/~malaybhattacharyya/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Computer Science, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="SOHAM.jpg" alt="Dr. Soham Sarkar" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Soham Sarkar</h4>
+            <a href="https://sites.google.com/view/sohamsarkar" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="KRISHNENDU.jpg" alt="Dr. Krishnendu Mukhopadhyaya" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Krishnendu Mukhopadhyaya</h4>
+            <a href="https://isi.irins.org/profile/275329" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Computer Science, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="KAUSHIK.jpeg" alt="Dr. Kaushik Jana" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Kaushik Jana</h4>
+            <a href="https://sites.google.com/view/kaushikjana/" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Statistics, Indian Statistical Institute</p>
+        </div>
+      </div>
+
+
+
+      <div class="prof-card" style="padding: 12.5px 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); height: 100%;">
+        <div class="prof-photo" style="width: 60px; height: 60px; border-width: 2.5px;">
+          <img src="PRABUDDHA.JPG" alt="Dr. Prabuddha Chakraborty" onerror="this.parentNode.innerHTML='<span style=font-size:8pt;color:#6B6B6B;padding:4px>Photo</span>'">
+        </div>
+        <div class="prof-info">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h4 style="margin: 0; font-size: 11pt; font-weight: 600;">Dr. Prabuddha Chakraborty</h4>
+            <a href="https://scholar.google.com/citations?user=j6fdfjQAAAAJ&hl=en" target="_blank" title="View Profile" style="color: var(--orange); font-size: 11pt; text-decoration: none;"><i class="fa-solid fa-globe"></i></a>
+          </div>
+          <p style="margin: 0; font-size: 9pt; line-height: 1.4;">Ph.D. Physics, Indiana University, USA</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="pf"><span>ISI Bangalore &nbsp;·&nbsp; BSDS Placement Brochure 2026–27</span><span>06</span><div class="pf-bar"></div></div>
+</div>
+
+
+
+
+
+
+
+<div class="page" style="background:var(--dark);color:var(--white);display:flex;flex-direction:column;justify-content:space-between;">
+  <div class="cover-top-bar"></div>
+
+  <div style="padding:14mm 14mm 0;text-align:center;">
+      <img src="ISI.jpg" style="width:10%;height:35%;" alt="ISI Logo">
+    <div style="font-family:'Oswald',sans-serif;font-size:28pt;font-weight:700;color:var(--white);text-transform:uppercase;margin-bottom:3mm;">Get in Touch</div>
+    <div style="width:60px;height:3px;background:var(--orange);margin:0 auto 5mm;"></div>
+    <p style="font-size:10pt;color:rgba(255,255,255,0.65);max-width:400px;margin:0 auto;">
+      We welcome opportunities to connect students with forward-thinking organisations.
+    </p>
+  </div>
+
+  <div style="padding:0 14mm 10mm;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-bottom:6mm;">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-top:3px solid var(--orange);border-radius:4px;padding:14px 18px;">
+        <div style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:8px;">Faculty Advisor</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Name:</span> Dr. Moutushi Chatterjee</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Email:</span> plcconv@isibang.ac.in</div>
+        <div style="font-size:9pt;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Phone:</span> +91 9477049150</div>
+      </div>
+      
+     <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-top:3px solid var(--orange);border-radius:4px;padding:14px 18px;">
+        <div style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:8px;">Batch Coordinator</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Name:</span> Dr. Rituparna Sen </div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Email:</span> rsen@isibang.ac.in</div>
+        <div style="font-size:9pt;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Phone:</span> +91 9176620249</div>
+      </div>
+       
+      
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-top:3px solid var(f--orange);border-radius:4px;padding:14px 18px;">
+        <div style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:8px;">Placement Coordinator</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Name:</span> Abhinavan OS</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Email:</span> bsdbg2401@isibang.ac.in</div>
+        <div style="font-size:9pt;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Phone:</span> +91 7397669869</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-top:3px solid var(f--orange);border-radius:4px;padding:14px 18px;">
+        <div style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:8px;">Placement Coordinator</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Name:</span> Kanneboyina Likhitha</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Email:</span> bsdbg2407@isibang.ac.in</div>
+        <div style="font-size:9pt;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Phone:</span> +91 7569883823</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-top:3px solid var(f--orange);border-radius:4px;padding:14px 18px;">
+        <div style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:8px;">Placement Coordinator</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Name:</span> Prateek N Jaiswal</div>
+        <div style="font-size:9pt;margin-bottom:4px;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Email:</span> bsdbg2412@isibang.ac.in</div>
+        <div style="font-size:9pt;"><span style="font-weight:600;color:rgba(255,255,255,0.6);min-width:55px;display:inline-block;">Phone:</span> +91 9958940542</div>
+      </div>
+  
+    </div>
+
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:4px;padding:12px 18px;margin-bottom:6mm;">
+      <div style="font-family:'Oswald',sans-serif;font-size:10pt;text-transform:uppercase;color:var(--orange);letter-spacing:0.06em;margin-bottom:6px;">Institute Address</div>
+      <p style="font-size:9.5pt;line-height:1.6;color:rgba(255,255,255,0.8);">
+        Indian Statistical Institute, Bangalore Centre<br>
+        8th Mile, Mysore Road, R.V College Post,<br>
+        Bangalore 560059.<br>
+        E-mail : courses@isibang.ac.in<br>
+        Telephone: 91-80-26985459<br>
+        Fax: 91-80-2848 4265
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;">
+      <div style="text-align:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:10px;border-radius:4px;">
+        <div style="font-size:7.5pt;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-bottom:4px;">ISI Bangalore Placement Cell</div>
+        <div style="font-size:9pt;font-weight:600;">
+          <a href="https://www.isibang.ac.in/~placement/" target="_blank" rel="noopener noreferrer" style="color: var(--orange); text-decoration: none;">https://www.isibang.ac.in/~placement/</a>
+        </div>
+      </div>
+      <div style="text-align:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:10px;border-radius:4px;">
+        <div style="font-size:7.5pt;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-bottom:4px;">BSDS Homepage</div>
+        <div style="font-size:9pt;font-weight:600;">
+          <a href="https://bsds-isi.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--orange); text-decoration: none;">https://bsds-isi.github.io/</a>
+        </div>
+      </div>
+      <div style="text-align:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:10px;border-radius:4px;">
+  <div style="font-size:7.5pt;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-bottom:4px;">Link to HTML</div>
+  <div style="font-size:9pt;font-weight:600;">
+    <a href="https://vortexglaive.github.io/PB/" target="_blank" rel="noopener noreferrer" style="color: var(--orange); text-decoration: none;">Click Here</a>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div>
+    <div style="padding: 5mm 12mm 4mm; text-align: center; font-size: 7.5pt; color: rgba(255,255,255,0.5);">
+      Indian Statistical Institute &nbsp;·&nbsp; Bangalore Centre &nbsp;·&nbsp; Bachelor of Statistical Data Science &nbsp;·&nbsp; Placement Brochure 2026–27
+    </div>
+    <div class="cover-bottom-bar"></div>
+  </div>
+</div>
+
+</body>
+</html>
