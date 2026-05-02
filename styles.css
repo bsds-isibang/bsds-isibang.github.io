@@ -769,7 +769,7 @@ ul {
     width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 10px;
 }
 
 /* ===== Navigation ===== */
@@ -1132,7 +1132,7 @@ ul {
 
 .wheel {
     width: 3px;
-    height: 8px;
+    height: 7px;
     background: var(--accent-primary);
     border-radius: 2px;
     animation: scroll-wheel 2s ease-in-out infinite;
@@ -1144,7 +1144,7 @@ ul {
 }
 
 .scroll-indicator span {
-    font-size: 12px;
+    font-size: 10px;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1158,7 +1158,7 @@ ul {
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .section-tag {
@@ -1167,7 +1167,7 @@ ul {
     background: var(--accent-glow);
     border: 1px solid rgba(99, 102, 241, 0.3);
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     color: var(--accent-secondary);
     text-transform: uppercase;
@@ -1179,11 +1179,11 @@ ul {
     font-size: clamp(32px, 5vw, 48px);
     font-weight: 700;
     letter-spacing: -1px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .section-desc {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-secondary);
     max-width: 500px;
     margin: 0 auto;
@@ -1191,7 +1191,7 @@ ul {
 
 .section-cta {
     text-align: center;
-    margin-top: 48px;
+    margin-top: 40px;
 }
 
 /* ===== About Section ===== */
@@ -1202,27 +1202,27 @@ ul {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 10px;
     align-items: center;
 }
 
 .about-text {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .about-features {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 15px;
 }
 
 .feature {
     display: flex;
-    gap: 16px;
+    gap: 10px;
 }
 
 .feature-icon {
@@ -1239,7 +1239,7 @@ ul {
 }
 
 .feature-content h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 4px;
 }
@@ -1302,8 +1302,8 @@ ul {
 .projects-filter {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin-bottom: 48px;
+    gap: 2px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
